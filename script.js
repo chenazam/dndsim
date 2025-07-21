@@ -1,5 +1,42 @@
 'use strict';
 import { characters } from './modules/characterlist.js';
+import {
+  capitalizeWord,
+  capitalizeString,
+  countOccurrences,
+  findAndReplace,
+  reverseArray,
+  randomNumberGenerator,
+  getRandomItem,
+} from './modules/helperfunctions.js';
+
+// JUST A TEST TO SIMULATE A TWO-PART DESCRIPTION GENERATION LIKE WITH THE MINI CHALLENGES FROM DRAG RACE SIM //
+
+const generateTwoPartPhrase = function () {
+  let professions = [
+    'teacher',
+    'pornstar',
+    'actor',
+    'model',
+    'student',
+    'dancer',
+    'programmer',
+  ];
+  let countries = {
+    0: 'Germany',
+    1: 'Italy',
+    2: 'the US',
+    3: 'the UK',
+    4: 'France',
+    5: 'Down Under',
+    6: 'Canada',
+  };
+  const randomProfession = getRandomItem(professions);
+  const randomCountry = getRandomItem(countries);
+  console.log(`I'm a ${randomProfession} from ${randomCountry}`);
+};
+
+generateTwoPartPhrase();
 
 let current_character_list = [];
 let current_party = [];
